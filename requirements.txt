@@ -33,10 +33,10 @@ colorlog==6.8.2
 # Memory Usage Optimization (optional)
 psutil==5.9.6
 
-# Security Enhancements (optional)
-cryptography==41.0.8
+
 
 # URL Processing
 urllib3==2.1.0
 Flask
+
 uvloop==0.19.0 ; platform_system != "Windows"
