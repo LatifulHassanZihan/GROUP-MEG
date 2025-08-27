@@ -30,6 +30,8 @@ from telegram.ext import (
 )
 from telegram.constants import ParseMode, ChatMemberStatus
 from telegram.error import TelegramError, Forbidden, BadRequest
+from keep_alive import keep_alive
+keep_alive()
 
 # Configure logging
 logging.basicConfig(
@@ -999,3 +1001,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
