@@ -2093,7 +2093,7 @@ We're here to help! 🇵🇸
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
 
-        async def adminhelp_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    async def adminhelp_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """🚨 List all admin commands"""
         admin_help_text = """
 🚨 **Admin Commands Reference** 🇵🇸
