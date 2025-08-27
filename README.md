@@ -1,43 +1,29 @@
-# GROUP MEG 🇵🇸 — Advanced Telegram Group Management Bot
+# GROUP MEG Bot 🇵🇸
 
-![Python](https://img.shields.io/badge/python-v3.11+-blue.svg)
-![python-telegram-bot](https://img.shields.io/badge/python--telegram--bot-v20.7-green.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+A comprehensive Telegram group management bot built with modern Python practices.
 
-Modern, feature-rich Telegram group management bot built with python-telegram-bot v20+. Designed for reliability, security, and ease of use.
+## 🚀 Features
 
-## ✨ Features
+- **🛡️ Moderation Tools**: Warn, kick, ban, mute users
+- **🎮 Games & Entertainment**: Dice, coin flip, 8-ball, jokes
+- **📊 Statistics**: Bot and group analytics
+- **🔧 Utilities**: Group info, member management
+- **👥 Role System**: Admin, moderator, helper, VIP roles
+- **💬 Smart Messages**: Welcome/goodbye with emojis
 
-### 🛡️ Advanced Moderation
-- **User Management**: Kick, ban, mute, unmute with time limits
-- **Warning System**: 3-strike auto-ban with customizable reasons
-- **Message Control**: Bulk message purge, chat lock/unlock
-- **Role-based Permissions**: Moderator, Helper, VIP roles
+## 👨‍💻 Developer
 
-### 🚫 Protection Systems
-- **Anti-Spam**: Keyword-based spam detection and removal
-- **Anti-Flood**: Message flood protection
-- **Content Filters**: NSFW content blocking, link filtering
-- **Auto-Moderation**: Automatic rule enforcement
+- **Name**: Latiful Hassan Zihan 🇵🇸
+- **Nationality**: Bangladeshi 🇧🇩
+- **Username**: @alwayszihan
+- **Contact**: Available for custom bot development!
 
-### 🎮 Interactive Experience
-- **Rich Menus**: Inline keyboard navigation
-- **Welcome/Goodbye**: Customizable member greetings
-- **Fun Commands**: Quotes, jokes, polls, entertainment
-- **Real-time Stats**: Group analytics and reporting
+## 🛠️ Installation
 
-### ⚙️ Configuration
-- **Flexible Settings**: Runtime configuration changes
-- **Custom Messages**: Personalized rules, welcome, goodbye
-- **Multi-language Ready**: Language code support
-- **Backup System**: Export/import group data
+### Local Development
 
-## 🚀 Quick Start
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd group-meg-bot
 
-### Prerequisites
-- Python 3.11+
-- Telegram Bot Token from [@BotFather](https://t.me/botfather)
-
-### Local Setup
-
-1. **Clone and Install**
