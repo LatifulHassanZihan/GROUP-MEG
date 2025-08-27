@@ -1,0 +1,49 @@
+{
+  "bot_name": "GROUP MEG 🇵🇸",
+  "bot_username": "@group_meg_bot",
+  "welcome_text": "👋 Welcome, {name}! Please read /rules and say hi to everyone! 🎉",
+  "goodbye_text": "👋 {name} left the group. We'll miss you! 💙",
+  "rules_text": "📜 **Group Rules**\n\n1. Be respectful and kind to all members\n2. No spam, advertising, or self-promotion\n3. Stay on topic and keep conversations relevant\n4. No NSFW content or inappropriate material\n5. No hate speech, discrimination, or harassment\n6. Listen to admins and moderators\n7. Use appropriate language\n8. No excessive caps or emoji spam\n9. Respect privacy - no doxxing\n10. Have fun and enjoy the community! ✨",
+  "language": "en",
+  "timezone": "UTC",
+  "roles": {
+    "moderator": {
+      "can_kick": true,
+      "can_ban": true,
+      "can_warn": true,
+      "can_mute": true
+    },
+    "helper": {
+      "can_kick": false,
+      "can_ban": false,
+      "can_warn": true,
+      "can_mute": true
+    },
+    "vip": {
+      "can_kick": false,
+      "can_ban": false,
+      "can_warn": false,
+      "can_mute": false
+    }
+  },
+  "quotes": [
+    "Success is not final, failure is not fatal: it is the courage to continue that counts. - Winston Churchill",
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "Life is what happens to you while you're busy making other plans. - John Lennon",
+    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+    "It is during our darkest moments that we must focus to see the light. - Aristotle",
+    "The only impossible journey is the one you never begin. - Tony Robbins",
+    "In the middle of difficulty lies opportunity. - Albert Einstein",
+    "Believe you can and you're halfway there. - Theodore Roosevelt"
+  ],
+  "jokes": [
+    "Why don't scientists trust atoms? Because they make up everything!",
+    "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+    "Why don't skeletons fight each other? They don't have the guts.",
+    "What do you call a fake noodle? An impasta!",
+    "Why did the scarecrow win an award? He was outstanding in his field!",
+    "I'm reading a book about anti-gravity. It's impossible to put down!",
+    "Did you hear about the mathematician who's afraid of negative numbers? He'll stop at nothing to avoid them!",
+    "Why don't eggs tell jokes? They'd crack each other up!"
+  ]
+}
