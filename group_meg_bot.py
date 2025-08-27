@@ -369,17 +369,118 @@ def main():
     application.add_error_handler(bot.error_handler)
 
     async def set_bot_commands(app):
-        commands = [
-            BotCommand("start", "🚀 Start the bot and see main menu"),
-            BotCommand("help", "❓ Get help and command list"),
-            BotCommand("about", "🤖 Bot & developer info"),
-            BotCommand("rules", "📋 Show group rules"),
-            BotCommand("settings", "⚙️ Interactive settings panel"),
-            # Add all other bot commands here:
-            # BotCommand("kick", "🦵 Kick user (admin only)"),
-            # BotCommand("ban", "🔨 Ban user (admin only)"),
-            # ...
-        ]
+    commands = [
+        # 🚀 Basic Commands
+        BotCommand("start", "🚀 Start the bot & Add to Group button"),
+        BotCommand("help", "❓ List all available commands"),
+        BotCommand("about", "👤 Show bot, developer, & project info"),
+        BotCommand("rules", "📋 Displays group rules"),
+        BotCommand("settings", "⚙️ Opens interactive config panel"),
+        
+        # 👮‍♂️ Admin & Moderation
+        BotCommand("kick", "🦵 Kick replied user (admin only)"),
+        BotCommand("ban", "🔨 Ban replied user (admin only)"),
+        BotCommand("unban", "🔓 Unban user by ID (admin only)"),
+        BotCommand("mute", "🔇 Mute replied user (admin only)"),
+        BotCommand("unmute", "🔊 Unmute replied user (admin only)"),
+        BotCommand("purge", "🗑️ Purge recent messages (admin only)"),
+        
+        # ⚠️ Warning & Report
+        BotCommand("warn", "⚠️ Warn a user (admin only)"),
+        BotCommand("warnings", "📒 Show user warnings"),
+        
+        # 🏷 Role Commands
+        BotCommand("addrole", "🎭 Assign role to user [reply]"),
+        BotCommand("removerole", "❌ Remove role from user [reply]"),
+        BotCommand("userroles", "🧑‍💼 Show user roles [reply]"),
+        BotCommand("roles", "🧩 List all roles"),
+        BotCommand("admins", "👮 List all admins"),
+        
+        # 👋 Welcome & Goodbye
+        BotCommand("setwelcome", "🎉 Set custom welcome message"),
+        BotCommand("setgoodbye", "👋 Set custom goodbye message"),
+        BotCommand("welcome", "👋 Show welcome message"),
+        BotCommand("goodbye", "👋 Show goodbye message"),
+        
+        # 🛠️ Configuration
+        BotCommand("setrules", "📝 Set group rules message"),
+        BotCommand("langue", "🌏 Set bot language"),
+        BotCommand("reloadconfig", "🔄 Reload config from file"),
+        
+        # ℹ️ Info
+        BotCommand("info", "🔍 Show user info [reply]"),
+        BotCommand("stats", "📊 Show group stats"),
+        
+        # 🟩 Panel/Menu
+        BotCommand("panel", "🟩 Show main control panel"),
+        BotCommand("menu", "🎛 Show interactive main menu"),
+        
+        # ⚡ Moderation & Security
+        BotCommand("lock", "🔒 Lock group for members"),
+        BotCommand("unlock", "🔓 Unlock group"),
+        BotCommand("restrict", "🚷 Restrict user temporarily"),
+        BotCommand("clearwarns", "🧹 Clear warnings [reply]"),
+        BotCommand("detectspam", "🤖 Scan & delete spam"),
+        BotCommand("antispam", "💣 Enable/disable anti-spam"),
+        BotCommand("antiflood", "🌊 Enable/disable flood control"),
+        BotCommand("log", "📜 Show recent actions"),
+        
+        # 👥 Member Management
+        BotCommand("promote", "⬆️ Promote member to admin"),
+        BotCommand("demote", "⬇️ Demote admin to user"),
+        BotCommand("listmembers", "👥 List all members"),
+        BotCommand("inactive", "😴 List inactive users"),
+        BotCommand("profile", "🪪 Show user profile [reply]"),
+        
+        # ✏️ Content & Rule Handling
+        BotCommand("setlang", "🌎 Set bot language"),
+        BotCommand("antinsfw", "🚫 Enable/disable NSFW filter"),
+        BotCommand("antiilink", "🔗 Enable/disable link blocking"),
+        
+        # 💾 Storage & Export
+        BotCommand("backup", "📦 Export group+user data"),
+        BotCommand("restore", "📥 Restore data from backup"),
+        BotCommand("exportroles", "🏷 Export roles as CSV"),
+        BotCommand("exportrules", "📄 Export rules as text"),
+        
+        # 📊 Statistics & Analytics
+        BotCommand("userstats", "📑 User stats [reply]"),
+        BotCommand("topwarned", "⚠️ Show top warned users"),
+        BotCommand("topactive", "🏆 List top active members"),
+        BotCommand("activity", "📉 Group activity graph"),
+        
+        # 📁 Media & Files
+        BotCommand("delmedia", "🗑️ Delete recent group media"),
+        BotCommand("pin", "📌 Pin a message"),
+        BotCommand("unpin", "📍 Unpin current message"),
+        
+        # 🔧 Utilities & Automation
+        BotCommand("settimezone", "🌐 Set group timezone"),
+        BotCommand("autodelete", "⏰ Remove old messages"),
+        BotCommand("captcha", "🤖 Enable/disable captcha"),
+        BotCommand("nightmode", "🌙 Enable/disable night mode"),
+        BotCommand("notify", "🔔 Notify all members"),
+        
+        # 😍 Fun & Engagement
+        BotCommand("quote", "💬 Random motivational quote"),
+        BotCommand("poll", "📊 Create group poll"),
+        BotCommand("joke", "😂 Tell a joke!"),
+        BotCommand("cat", "🐱 Random cat picture"),
+        
+        # 🆘 Admin Help & Contact
+        BotCommand("contactadmin", "📞 Call admins for help"),
+        BotCommand("adminhelp", "🆘 List all admin commands"),
+        BotCommand("report", "🚨 Report user to admin"),
+        
+        # 🧩 Customization & Advanced
+        BotCommand("setprefix", "🏷 Set group command prefix"),
+        BotCommand("setrolecolor", "🎨 Set color for roles"),
+    ]
+    await app.bot.set_my_commands(commands)
+
+application.post_init = set_bot_commands
+logger.info("🚀 Starting GROUP MEG Bot v2.5 Enhanced with all options...")
+
         await app.bot.set_my_commands(commands)
     application.post_init = set_bot_commands
     logger.info("🚀 Starting GROUP MEG Bot v2.5 Enhanced...")
