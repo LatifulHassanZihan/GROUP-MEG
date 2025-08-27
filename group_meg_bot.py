@@ -34,8 +34,8 @@ from telegram.ext import (
     filters,
     AIORateLimiter,)
 
-from keep_alive import keep_alive
-keep_alive()
+#from keep_alive import keep_alive
+#keep_alive()
 # ------------------------------------------------------------------------------
 # Logging
 # ------------------------------------------------------------------------------
@@ -1431,6 +1431,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
 
