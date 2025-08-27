@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: group-meg-bot
+    env: python
+    script: ./start.sh
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        fromSecret: TELEGRAM_BOT_TOKEN
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
