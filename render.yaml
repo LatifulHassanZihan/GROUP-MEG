@@ -1,15 +1,51 @@
 services:
   - type: web
     name: group-meg-bot
-    env: python
+    runtime: docker
+    plan: starter  # or free
+    region: oregon  # or your preferred region
+    branch: main
+    
+    # Docker-specific settings
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    
+    # Environment variables
+    envVars:
+      - key: BOT_TOKEN
+        sync: false  # Keep this secret
+      - key: LOG_LEVEL
+        value: INFO
+      - key: ENVIRONMENT  
+        value: production
+      - key: PORT
+        value: 8080
+        
+    # Health check
+    healthCheckPath: /health
+    
+    # Scaling (optional)
+    numInstances: 1
+    
+    # Disk storage for persistent data
+    disk:
+      name: bot-data
+      mountPath: /app/data
+      sizeGB: 1
+
+  # Optional: Background worker for webhook mode
+  - type: worker
+    name: group-meg-bot-worker  
+    runtime: docker
     plan: starter
-    buildCommand: pip install -r requirements.txt
-    startCommand: python group_meg_bot.py
+    branch: main
+    dockerfilePath: ./Dockerfile
+    startCommand: python webhook_server.py
+    
     envVars:
       - key: BOT_TOKEN
         sync: false
-      - key: PYTHON_VERSION
-        value: 3.11.0
+      - key: WEBHOOK_URL
+        value: https://group-meg-bot.onrender.com
       - key: LOG_LEVEL
         value: INFO
-    healthCheckPath: /health
