@@ -12,8 +12,6 @@ import random
 from pathlib import Path
 from typing import Any, Dict, Optional, Tuple, List
 from datetime import datetime, timedelta
-from keep_alive import keep_alive
-keep_alive()
 
 from telegram import (
     Update,
@@ -36,7 +34,8 @@ from telegram.ext import (
     filters,
     AIORateLimiter,
 )
-
+from keep_alive import keep_alive
+keep_alive()
 # ------------------------------------------------------------------------------
 # Logging
 # ------------------------------------------------------------------------------
@@ -1432,3 +1431,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
